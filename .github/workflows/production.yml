@@ -105,9 +105,9 @@ jobs:
           echo "window['appConfig'] = {\"version\": \"${{ needs.bump_version.outputs.new_tag }}\"}" > build/app-config.js
       - name: Deploy app
         uses: akhileshns/heroku-deploy@v3.12.12
-          with:
-            heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-            heroku_email: ${{ secrets.HEROKU_EMAIL }}
-            heroku_app_name: 'places-app-prod-ap'
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          heroku_app_name: 'places-app-prod-ap'
 
     
